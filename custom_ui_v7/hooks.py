@@ -7,7 +7,8 @@ app_license = "mit"
 
 # Apps
 # ------------------
-
+app_include_css="/assets/custom_ui_v7/css/nova-ui-new1-24.css"
+app_include_js="nova_ui.bundle.js"
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
