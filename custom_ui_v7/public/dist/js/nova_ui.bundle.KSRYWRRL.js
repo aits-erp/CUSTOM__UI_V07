@@ -6,13 +6,18 @@
     window.__miniNavObserverAdded = true;
     console.log("[custom] desk_home_override loaded");
     const redirectToAccountsDashboard = () => {
-      if (window.location.pathname === "/app" || window.location.pathname === "/app/home") {
+      var _a, _b, _c;
+      const canAccessAccountsDashboard = ((_a = frappe.boot.user.can_read) == null ? void 0 : _a.includes("Accounts Dashboard")) || ((_b = frappe.boot.user.roles) == null ? void 0 : _b.includes("Accounts Manager")) || ((_c = frappe.boot.user.roles) == null ? void 0 : _c.includes("Accounts User"));
+      if ((window.location.pathname === "/app" || window.location.pathname === "/app/home") && canAccessAccountsDashboard) {
         console.log("[custom] redirecting to /app/dashboard-view/Accounts");
         frappe.set_route("dashboard-view", "Accounts");
+      } else {
+        console.log("[custom] user does NOT have access to Accounts Dashboard - staying on home");
       }
     };
     const waitForFrappe = () => {
-      if (typeof frappe !== "undefined" && frappe.set_route) {
+      var _a;
+      if (typeof frappe !== "undefined" && frappe.set_route && ((_a = frappe.boot) == null ? void 0 : _a.user)) {
         redirectToAccountsDashboard();
       } else {
         setTimeout(waitForFrappe, 300);
@@ -592,4 +597,4 @@
     createMiniNav();
   })();
 })();
-//# sourceMappingURL=nova_ui.bundle.4JDNANEE.js.map
+//# sourceMappingURL=nova_ui.bundle.KSRYWRRL.js.map

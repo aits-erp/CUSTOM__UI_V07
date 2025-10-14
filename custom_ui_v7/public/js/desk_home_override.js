@@ -9,14 +9,28 @@
   // Redirect to Accounts Dashboard on first load
   // ==========================
   const redirectToAccountsDashboard = () => {
-    if (window.location.pathname === "/app" || window.location.pathname === "/app/home") {
+    // ✅ Check if user has permission to view Accounts Dashboard
+    const canAccessAccountsDashboard =
+      frappe.boot.user.can_read?.includes("Accounts Dashboard") ||
+      frappe.boot.user.roles?.includes("Accounts Manager") || // optional: based on your actual role
+      frappe.boot.user.roles?.includes("Accounts User"); // adjust based on your setup
+
+    // Only redirect if:
+    // 1. User is on home
+    // 2. User has access permission
+    if (
+      (window.location.pathname === "/app" || window.location.pathname === "/app/home") &&
+      canAccessAccountsDashboard
+    ) {
       console.log("[custom] redirecting to /app/dashboard-view/Accounts");
       frappe.set_route("dashboard-view", "Accounts");
+    } else {
+      console.log("[custom] user does NOT have access to Accounts Dashboard - staying on home");
     }
   };
 
   const waitForFrappe = () => {
-    if (typeof frappe !== "undefined" && frappe.set_route) {
+    if (typeof frappe !== "undefined" && frappe.set_route && frappe.boot?.user) {
       redirectToAccountsDashboard();
     } else {
       setTimeout(waitForFrappe, 300);
@@ -28,6 +42,27 @@
   } else {
     window.addEventListener("load", waitForFrappe);
   }
+
+  // const redirectToAccountsDashboard = () => {
+  //   if (window.location.pathname === "/app" || window.location.pathname === "/app/home") {
+  //     console.log("[custom] redirecting to /app/dashboard-view/Accounts");
+  //     frappe.set_route("dashboard-view", "Accounts");
+  //   }
+  // };
+
+  // const waitForFrappe = () => {
+  //   if (typeof frappe !== "undefined" && frappe.set_route) {
+  //     redirectToAccountsDashboard();
+  //   } else {
+  //     setTimeout(waitForFrappe, 300);
+  //   }
+  // };
+
+  // if (document.readyState === "complete") {
+  //   waitForFrappe();
+  // } else {
+  //   window.addEventListener("load", waitForFrappe);
+  // }
 
   // ==========================
   // Create Global MiniNav + Dashboard
