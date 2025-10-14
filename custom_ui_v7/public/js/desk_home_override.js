@@ -306,28 +306,27 @@ if (document.querySelector(".page-head-minnav-nova-outer")) return;
     // container
     const miniNavOuter = document.createElement("div");
     miniNavOuter.className = "page-head-minnav-nova-outer";
-    // miniNavOuter.style.display = "flex";
-    // miniNavOuter.style.alignItems = "center";
-    // miniNavOuter.style.position = "relative";
-    miniNavOuter.style.marginLeft = "270px";
-    miniNavOuter.style.marginTop = "60px";
-    // miniNavOuter.style.zIndex = "9998";
     miniNavOuter.style.display = "flex";
     miniNavOuter.style.alignItems = "center";
-    miniNavOuter.style.position = "fixed";  // make it fixed
-    miniNavOuter.style.top = "0";           // stick to top
-    miniNavOuter.style.left = "0";          // stick to left
-    miniNavOuter.style.width = "20%";      // full width
-    miniNavOuter.style.padding = "6px 20px"; // optional padding
-    miniNavOuter.style.background = "#fff4dfff"; // background to avoid overlap
-    miniNavOuter.style.zIndex = "998";     // above other elements
-    boxShadow = "0 2px 6px rgba(0,0,0,0.1)"; // optional shadow
+    miniNavOuter.style.position = "relative";
+    miniNavOuter.style.zIndex = "9998";
+    // miniNavOuter.style.marginLeft = "270px";
+    // miniNavOuter.style.marginTop = "60px";
+    // miniNavOuter.style.display = "flex";
+    // miniNavOuter.style.alignItems = "center";
+    // miniNavOuter.style.position = "fixed";  // make it fixed
+    // miniNavOuter.style.top = "0";           // stick to top
+    // miniNavOuter.style.left = "0";          // stick to left
+    // miniNavOuter.style.width = "20%";      // full width
+    // miniNavOuter.style.padding = "6px 20px"; // optional padding
+    // miniNavOuter.style.background = "#fff4dfff"; // background to avoid overlap
+    // miniNavOuter.style.zIndex = "998";     // above other elements
+    // boxShadow = "0 2px 6px rgba(0,0,0,0.1)"; // optional shadow
 
 
     const miniNav = document.createElement("div");
     miniNav.className = "page-head-minnav-nova";
     miniNav.style.display = "flex";
-    miniNav.style.position = "fixed";
     miniNav.style.gap = GAP + "px";
     miniNav.style.alignItems = "center";
     miniNav.style.overflow = "hidden"; // hide overflow, we will scroll
