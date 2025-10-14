@@ -248,7 +248,7 @@
 
 
     // Dashboard toggle button (always visible)
-    let dashboardVisible = false;
+    let dashboardVisible = true;
     const rightBtn = document.createElement("button");
     rightBtn.innerHTML = "<img src='/assets/custom_ui_v6/images/apps-button.png' style='width:30px;height:35px;object-fit:contain;' />";
     rightBtn.className = "dashboard-btn-global";

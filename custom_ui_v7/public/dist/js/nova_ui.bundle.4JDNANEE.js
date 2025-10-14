@@ -232,7 +232,7 @@
   }
 </style>
 `;
-      let dashboardVisible = false;
+      let dashboardVisible = true;
       const rightBtn = document.createElement("button");
       rightBtn.innerHTML = "<img src='/assets/custom_ui_v6/images/apps-button.png' style='width:30px;height:35px;object-fit:contain;' />";
       rightBtn.className = "dashboard-btn-global";
@@ -592,4 +592,4 @@
     createMiniNav();
   })();
 })();
-//# sourceMappingURL=nova_ui.bundle.TFMUWIK7.js.map
+//# sourceMappingURL=nova_ui.bundle.4JDNANEE.js.map
