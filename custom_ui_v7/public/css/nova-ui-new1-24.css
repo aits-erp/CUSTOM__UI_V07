@@ -179,18 +179,18 @@ body, .page-container, .page-head-content, .page-head, .page-head-minnav {
 
 
 .form-tabs-list .form-tabs .nav-item .nav-link{
-    background-color: #f0d375;
+    background-color: #FFE8B1;
     color: #001299;
 }
 
 
 .form-tabs-list .form-tabs{
-    background-color: #f0d375;
+    background-color: #FFE8B1;
     color: #001299;
 }
 
 .form-tabs-list{
-background-color: #f0d375;
+background-color: #FFE8B1;
 color: #001299;
 }
 /* ==========================
@@ -225,7 +225,7 @@ color: #001299;
 
 
 /* .form-tabs-list .form-tab .nav-item .nav-link {
-    background-color: #f0d375 !important;
+    background-color: #FFE8B1 !important;
     border-radius: 10px !important;
 } */
 
@@ -234,7 +234,7 @@ color: #001299;
 .item-inventory_section-tab:hover 
 {
     color:#001299 !important;
-    background-color: #f0d375 !important;
+    background-color: #FFE8B1 !important;
     border-radius: 10px !important; 
     font-weight: 600 !important;
     font-size: 16px !important;
@@ -349,7 +349,7 @@ color: #001299;
 
 
 .ql-toolbar.ql-snow {
-    background-color: #f0d375 !important;
+    background-color: #FFE8B1 !important;
     color: #001299 !important;
 }
 
@@ -397,7 +397,7 @@ color: #001299;
 }
 
 .form-links .document-link .document-link-badge, .form-links .document-link .report-link-badge{
-    background-color: #f0d375;
+    background-color: #FFE8B1;
     color: #001299;
 }
 
