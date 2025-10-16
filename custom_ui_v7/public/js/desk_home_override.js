@@ -186,15 +186,11 @@
         </style>
 
         <div class="nova-grid" id="main-grid" nova-animate-in>
-          <div class="nova-card" onclick="frappe.set_route('app/dashboard-view/Total%20Outstanding%20Amount%20Of%20Distributors%20Group%2060')">
+          <div class="nova-card" onclick="frappe.set_route('app/dashboard-view/Outstanding%20Of%20Distributor%20Over%2060%20Days')">
         <div class="nova-icon c-yellow"><img src="/assets/custom_ui_v7/images/D2.png" style="width:60px; height:50px; object-fit: contain;" /></div><div>Total Outstanding Amount Of Distributors Group 60</div>
     </div>
     
-    <div class="nova-card" onclick="frappe.set_route('app/dashboard-view/Product%20Ageing%20over%20180%20Days')">
-        <div class="nova-icon c-orange"><img src="/assets/custom_ui_v7/images/time.png" style="width:60px; height:50px; object-fit: contain;" /></div><div>Product Ageing over 180 Days</div>
-    </div>
-    
-    <div class="nova-card" onclick="frappe.set_route('app/dashboard/Outstanding%20Debtors%20Monthwise')">
+    <div class="nova-card" onclick="frappe.set_route('app/dashboard-view/Outstanding%20Of%20Debtors%20Monthwise')">
         <div class="nova-icon c-blue"><img src="/assets/custom_ui_v7/images/debt.png" style="width:60px; height:50px; object-fit: contain;" /></div><div>Outstanding Debtors Monthwise</div>
     </div>
 
@@ -735,6 +731,7 @@ if (window.frappe && frappe.router) {
     // Initial call
     createMiniNav();
 })();
+
 
 
 
