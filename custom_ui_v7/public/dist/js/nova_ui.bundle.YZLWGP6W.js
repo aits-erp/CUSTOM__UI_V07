@@ -249,7 +249,7 @@
       rightBtn.style.border = "none";
       rightBtn.style.borderRadius = "50%";
       rightBtn.style.cursor = "pointer";
-      rightBtn.style.backgroundColor = "#090202ff";
+      rightBtn.style.backgroundColor = "#fff";
       rightBtn.style.boxShadow = "0 4px 10px rgba(0,0,0,0.2)";
       rightBtn.style.zIndex = "9999";
       rightBtn.onclick = () => {
