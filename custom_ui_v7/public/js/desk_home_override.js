@@ -200,6 +200,9 @@
     <div class="nova-card" onclick="frappe.set_route('app/dashboard-view/Bottom%2050%20Selling%20Item')">
         <div class="nova-icon c-red"><img src="/assets/custom_ui_v7/images/bottom-selling.png" style="width:60px; height:50px; object-fit: contain;" /></div><div>Bottom 50 selling items</div>
     </div>
+	<div class="nova-card" onclick="frappe.set_route('app/dashboard-view/Top%2050%20selling%20item%20which%20are%20out%20of%20stock')">
+        <div class="nova-icon c-teal"><img src="/assets/custom_ui/images/out-of-stock.png" style="width:60px; height:50px; object-fit: contain;" /></div><div>Top 50 selling items out of stock</div>
+    </div>
     <div class="nova-card" onclick="frappe.set_route('app/dashboard-view/Accounts')">
         <div class="nova-icon c-brown"><img src="/assets/custom_ui_v7/images/creditor.png" style="width:60px; height:50px; object-fit: contain;" /></div><div>Accounts Dashboard</div>
     </div>
@@ -731,6 +734,7 @@ if (window.frappe && frappe.router) {
     // Initial call
     createMiniNav();
 })();
+
 
 
 
